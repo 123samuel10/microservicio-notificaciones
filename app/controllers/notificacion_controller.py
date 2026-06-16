@@ -18,7 +18,7 @@ from app.services.notificacion_service import NotificacionService
 router = APIRouter(prefix="/notificaciones", tags=["Notificaciones"])
 
 
-@router.get("/", response_model=List[NotificacionResponse])
+@router.get("", response_model=List[NotificacionResponse])
 async def mis_notificaciones(
     solo_no_leidas: bool = Query(False),
     page: int = Query(1, ge=1),
