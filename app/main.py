@@ -63,6 +63,7 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
     lifespan=lifespan,
+    root_path="/notificaciones",
 )
 
 app.add_middleware(
